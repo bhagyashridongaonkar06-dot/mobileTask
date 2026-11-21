@@ -30,7 +30,7 @@ export let mobileArr: ImobileArr[]=[
       ],
       price: 999,
       originalPrice: 1148.85,
-      availableStock: 3,
+      availableStock: 0,
       productImg: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=400'
     },
     {
