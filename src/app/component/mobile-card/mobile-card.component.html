@@ -30,8 +30,7 @@
                     <div class="col-md-3">
                         <h2 class="m-0">{{mob.price | currency :'INR'}}</h2>
                         <h3 class="m-0"><del>({{mob.originalPrice | currency:'INR'}})</del></h3>
-                        <h3 class="m-0 ml-4 text-danger" *ngIf="mob.availableStock < 4; ">{{mob.availableStock + ' items
-                            left only'}}</h3>
+                        <h3 class="m-0 ml-4 text-danger" *ngIf="mob.availableStock === 0 ? 'Not Available' : 'Available'; ">{{mob.availableStock + ' item left'}}</h3>
                             </div>
                             
                             </div>
