@@ -1,4 +1,4 @@
-<h1 class="bg-light">Mobile Products</h1>
+<h1 class="bg-light p-2">Mobile Products</h1>
 <div class="container">
     <div class="row" *ngFor="let mob of mobileInfo">
         <div class="col-md-12">
@@ -14,7 +14,12 @@
                         </figure>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="m-0">{{mob.productName}}</h1>
+                        <h1 class="m-0">{{mob.productName}} <span class="badge" [ngClass]="
+                            {
+                                'badge-success' : mob.rating >= 6,
+                                'badge-warning' : mob.rating >= 3 && mob.rating < 6,
+                                'badge-danger' : mob.rating < 3
+                            }">{{mob.rating}}</span></h1>
                         <h4 class="m-0">Features :</h4>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" *ngFor="let mob of mob.features">
