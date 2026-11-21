@@ -6,7 +6,7 @@
                 <div class="row" [ngClass]="{
                     'blur' : mob.availableStock < 4
                 }">
-                <h1  *ngIf="mob.availableStock < 4" class="text-danger infocenter">Product is out of stock</h1>
+                    <h1 *ngIf="mob.availableStock < 4" class="text-danger infocenter">Product is out of stock</h1>
                     <div class="col-md-3">
                         <figure>
                             <img [src]="mob.productImg || 'https://projectexports.com/assets/images/product_default.jpg'"
@@ -30,10 +30,12 @@
                     <div class="col-md-3">
                         <h2 class="m-0">{{mob.price | currency :'INR'}}</h2>
                         <h3 class="m-0"><del>({{mob.originalPrice | currency:'INR'}})</del></h3>
-                        <h3 class="m-0 ml-4 text-danger" *ngIf="mob.availableStock === 0 ? 'Not Available' : 'Available'; ">{{mob.availableStock + ' item left'}}</h3>
-                            </div>
-                            
-                            </div>
+                        <h3 class="m-0 ml-4 text-danger"
+                            *ngIf="mob.availableStock === 0 ? 'Not Available' : 'Available'; ">{{mob.availableStock + '
+                            item left'}}</h3>
+                    </div>
+
+                </div>
             </ng-container>
         </div>
     </div>
